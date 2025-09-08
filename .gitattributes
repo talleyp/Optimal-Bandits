@@ -1,0 +1,17 @@
+# Normalize line endings
+* text=auto
+
+# Python files
+*.py text diff=python
+
+# Notebooks (store as binary, no messy JSON diffs)
+*.ipynb binary
+
+# CSV and data files (text by default, unless using LFS)
+*.csv text
+*.tsv text
+
+# Images and plots (always binary)
+*.png binary
+*.jpg binary
+*.pdf binary
