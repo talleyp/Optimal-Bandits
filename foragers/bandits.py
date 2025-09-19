@@ -4,7 +4,7 @@ class BernoulliBandit:
     # accepts a list of K >= 2 floats , each lying in [0 ,1]
     def __init__(self, means):
         self.means = means
-        self.mu_star = np.argmax(self.means)
+        self.mu_star = np.max(self.means)
         self._regret = 0
 
     # Function should return the number of arms

@@ -1,5 +1,4 @@
 import numpy as np
-from bandits import BernoulliBandit
 
 def FollowTheLeader(bandit, n):
     K = bandit.K()  # Access the attribute directly
@@ -40,14 +39,3 @@ def FollowTheLeader(bandit, n):
         total_reward += reward
         
     return total_reward
-
-# Example usage
-K = 5
-N = 100
-# Ensure that BernoulliBandit has a .K attribute, not a .K() method
-mybandit = BernoulliBandit(np.random.random(K))
-
-total_reward = FollowTheLeader(mybandit, N)
-
-print(f"Total reward from Follow-the-Leader algorithm: {total_reward}")
-print(f"Final regret: {mybandit.regret()}")
